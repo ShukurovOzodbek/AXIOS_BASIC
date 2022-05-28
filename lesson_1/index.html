@@ -13,7 +13,7 @@
         <div class="right">
             <img  src="./image 2.png" alt="">
             <h2>Выши крыши</h2>
-            <button>Добавить</button>
+            <button class="add">Добавить</button>
             <img class="const" src="./Vector (2).png" alt="">
             <select name="" id="">
                 <option value="1990">1990</option>
@@ -60,8 +60,31 @@
 
     <div class="modal">
         <div class="back"></div>
+        <div class="back_2"></div>
+        <div class="back_3"></div>
         <div class="modal_panel">
             <form name="rename" action="#">
+                <input type="text" placeholder="Название" name="name">
+                <input type="text" placeholder="Страна" name="country">
+                <input type="text" placeholder="Cсылка на фото" name="logo">
+                <input type="text" placeholder="Слоган" name="slogan">
+                <input type="text" placeholder="Откуда - куда" name="head_quaters">
+                <input type="text" placeholder="Вебсайт" name="website">
+                <input type="text" placeholder="Когда было создано" name="established">
+                <button>Сохранить</button>
+            </form>
+        </div>
+        <div class="modal_panel_3">
+            <h1>Info About choosen box</h1>
+            <span>Название: <b class="name"></b></span>
+            <span>Страна: <b class="count"></b></span>
+            <span>Откуда - куда: <b class="from_to"></b></span>
+            <span>Когда было создано: <b class="create_data"></b></span>
+            <span>Вебсайт: <b class="website"></b></span>
+            <span>Слоган: <b class="slogan"></b> </span>
+        </div>
+        <div class="modal_panel_2">
+            <form name="add" action="#">
                 <input type="text" placeholder="Название" name="name">
                 <input type="text" placeholder="Страна" name="country">
                 <input type="text" placeholder="ссылка на фото" name="logo">
