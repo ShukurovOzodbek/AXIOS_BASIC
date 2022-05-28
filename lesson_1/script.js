@@ -6,7 +6,6 @@ function react() {
             result = res.data
             localStorage.setItem('res', JSON.stringify(result))
             reload(result)
-            react()
         })
         .catch(err => console.log('err'))
 }
@@ -213,5 +212,6 @@ function setPost(post) {
     axios.post('http://localhost:3001/users', post)
         .then(res => console.log(res))
         .catch(err => console.log(err))
+
     react()
 }
