@@ -6,6 +6,7 @@ function react() {
             result = res.data
             localStorage.setItem('res', JSON.stringify(result))
             reload(result)
+            react()
         })
         .catch(err => console.log('err'))
 }
