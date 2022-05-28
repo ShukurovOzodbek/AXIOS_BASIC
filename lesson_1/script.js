@@ -11,13 +11,10 @@ function react() {
 }
 react()
 
-let res = JSON.parse(localStorage.getItem('res'))
-if(res) {
-    reload(res)
-}
-
-searchFirst()
+searchFirst() 
 searchSecond()
+
+let data = []
 
 function reload(arr) {
     let cont = document.querySelector('.boxes')
@@ -114,6 +111,9 @@ function reload(arr) {
                 del_change_box.style.display = 'block'
                 del_change_box.style.display = 'flex'
             }, 5000);
+        }
+        if(!data.includes(item.established)) {
+            data.push(item.established)
         }
     }
 }
@@ -215,3 +215,22 @@ function setPost(post) {
 
     react()
 }
+
+let select = document.querySelector('select')
+
+function setFilterYears() {
+    for(let item of data) {
+        if(item) {
+            let option = new Option(item, item)
+            select.append(option)
+        }
+    }   
+}
+
+if(data > 0) {
+    setFilterYears()
+}else{
+    setTimeout(() => {
+        setFilterYears()
+    }, 1000);
+}   
